@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">hello bangladesh</h1>
+    <input type="text" id="input-feild" placeholder="Write your comment">
+    <button id="btn-delete" disabled>delete</button>
+
+<script>
+    document.getElementById('btn-delete').addEventListener('click',function(){
+        document.getElementById('text').style.display = 'none';
+    });
+
+    document.getElementById('input-feild').addEventListener('keyup', function(events){
+        console.log(events);
+        const textValue = events.target.value;
+        const button = document.getElementById('btn-delete');
+        if(textValue == 'delete'){
+            button.removeAttribute('disabled');
+        }
+        else {
+            button.setAttribute('disabled',true);
+        }
+
+    })
+</script>
+</body>
+</html>

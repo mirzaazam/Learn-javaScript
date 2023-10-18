@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h1>Hello</h1>
+            <ul id="my-ul">
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+            </ul>
+        </section>
+        <section>
+            <button onclick="console.log('wait boss!')">click me</button>
+            <button onclick="console.log(63)">submit</button>
+        </section>
+        <!-- we can more event onclick options -->
+        <section>
+            <!-- option: 1 -->
+            <button onclick="document.body.style.backgroundColor = 'purple'">Make purple</button>
+
+            <!-- option: 2 -->
+            <button id="blue" onclick="makeBule()">Make Blue</button>
+
+            <!-- option: 3 -->
+            <button id="dark"> make dark </button>
+
+            <!-- option: 4 -->
+            <button id="red">Make red</button>
+
+            <!-- option: 5 -->
+            <button id="make-orange">Make Orange</button>
+
+            <!-- option: 6 -->
+            <button id="make-pink">Make pink</button>
+
+            <!-- option: 7 -->
+            <button id="make-green" style="cursor: pointer;">Make Green</button>
+        </section>
+
+        <p id="p-tag">Hello Bangladesh</p>
+        <button id="btn-1">change this value</button>
+        <br> <br>
+        <input type="text" name="" id="input-feild">
+        <button id="btn-update">update</button>
+
+        <!-- another practice -->
+        <p id="email-p">email plase</p>
+        <input type="email" name="" id="input-email">
+        <button id="email-btn">Submit</button>
+
+    </main>
+
+
+
+
+
+
+    <!--js file-->
+    <script src="./js/javascript.js"></script>
+
+    <script>
+            const inputEmail = document.getElementById('input-email');
+            const emailButton = document.getElementById('email-btn');
+            const emailParagraph = document.getElementById('email-p');
+
+            emailButton.addEventListener('click',function(){
+                const Email = inputEmail.value;
+                emailParagraph.innerText = Email;
+                inputEmail.value = '';
+            });
+
+
+    </script>
+</body>
+</html>

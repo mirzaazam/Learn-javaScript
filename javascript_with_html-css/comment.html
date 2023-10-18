@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <h1>We create a comment box</h1>
+    <div id="item-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt nostrum sapiente architecto distinctio quae non nam. Illo aperiam quidem ducimus, mollitia officia tempore, nulla, quam animi vitae consectetur eveniet.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda accusamus cum facilis, error voluptatem tempore rem impedit in quos? Ratione atque quis veritatis officia sed, laudantium mollitia cumque ipsa illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore laudantium quidem, numquam impedit ab vitae fuga perspiciatis, tempora architecto dignissimos exercitationem nam iusto necessitatibus pariatur vel ipsa repellendus consequuntur adipisci.</p>
+    </div>
+
+    <textarea  id="text-box" cols="60" rows="10"></textarea><br>
+    <button id="btn-save">Save</button>
+ 
+
+    <script src="./js/comment-box.js"></script>
+    <script>
+
+        document.getElementById('btn-save').addEventListener('click',function(){
+            const textAreaValue = document.getElementById('text-box').value;
+            const text = document.createElement('p');
+            text.innerText  = textAreaValue;
+            const div_container = document.getElementById('item-container')
+            div_container.appendChild(text);
+            document.getElementById('text-box').value = ' ';
+        });
+
+    </script>
+</body>
+</html>
