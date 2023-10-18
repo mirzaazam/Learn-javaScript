@@ -11,10 +11,14 @@
     <button id="btn-delete" disabled>delete</button>
 
 <script>
+
+    //btn click korle hello bangladesh cole jabe
     document.getElementById('btn-delete').addEventListener('click',function(){
         document.getElementById('text').style.display = 'none';
     });
 
+
+    //input feild a delete likhle kaj hbe r ono kono word ba letter dile btn disaabled hoye jabe
     document.getElementById('input-feild').addEventListener('keyup', function(events){
         console.log(events);
         const textValue = events.target.value;
@@ -25,8 +29,7 @@
         else {
             button.setAttribute('disabled',true);
         }
-
-    })
+    });
 </script>
 </body>
 </html>

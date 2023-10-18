@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegates</title>
+</head>
+<body>
+        <h1>Explore delegates</h1>
+
+        <ul id="ul-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Placeat, commodi repudiandae?</li>
+            <li class="item">Quas, porro culpa!</li>
+            <li class="item">Ab, enim vitae!</li>
+            <li class="item">Blanditiis, eligendi illo!</li>
+        </ul>
+        <button id="btn-add">Add item</button>
+
+        <script>
+
+            //remove listchild from the list on click 
+            // const items = document.getElementsByClassName('item');
+            // for(const item of items){
+            //     item.addEventListener('click', function(event){
+            //         event.target.parentNode.removeChild(event.target);
+            //     });
+            // }
+
+
+            // full contant remove
+            document.getElementById('ul-container').addEventListener('click',function(event){
+                event.target.parentNode.removeChild(event.target);
+            })
+
+
+            //button click remove li and added list
+            document.getElementById('btn-add').addEventListener('click', function(){
+                const listContainer = document.getElementById('ul-container');
+                const li = document.createElement('li');
+                li.innerText = 'added a new list';
+                listContainer.appendChild(li);
+            })
+        </script>
+</body>
+</html>
