@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Comment</title>
+</head>
+<style>
+    h1 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+
+    #div-container {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    #comment-box {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #btn {
+        padding: 10px 25px;
+        font-weight: 600;
+        background-color: purple;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .p-item {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    }
+</style>
+
+<body>
+    <header>
+        <h1>We add the comment when click the button </h1>
+    </header>
+    <section>
+        <!-- div-container -->
+        <div id="div-container">
+            <p class="p-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, obcaecati?</p>
+            <p class="p-item">Autem rem unde optio, modi dolorem incidunt eligendi cum sunt?</p>
+            <p class="p-item">Facilis incidunt asperiores consequuntur hic voluptatibus optio laborum. Soluta, culpa.
+            </p>
+            <p class="p-item">Tenetur veniam molestias quis libero voluptatem, itaque magni consequuntur quidem?</p>
+        </div>
+
+        <!-- comment box -->
+        <textarea id="comment-box" cols="60" rows="5" placeholder="Write your comment"></textarea><br>
+
+        <!-- button -->
+        <button id="btn">Save</button>
+    </section>
+
+
+    <!-- javascript process -->
+    <script>
+
+        //set the commnet in div container from the function
+        const button = document.getElementById('btn');
+        button.addEventListener('click', function () {
+            const textArea = document.getElementById('comment-box').value;
+            const createPTag = document.createElement('p');
+            createPTag.innerText = textArea;
+            document.getElementById('div-container').appendChild(createPTag);
+            //this code for comment box clear.
+            document.getElementById('comment-box').value = '';
+        });
+
+    </script>
+</body>
+
+</html>
