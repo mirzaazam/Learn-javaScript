@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick options</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    #btn-blue{
+        padding: 10px 15px;
+        color: white;
+        background-color: blue;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #btn-purple{
+        padding: 10px 15px;
+        color: white;
+        background-color: purple;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #btn-green{
+        padding: 10px 15px;
+        color: white;
+        background-color: green;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #btn-red{
+        padding: 10px 15px;
+        color: white;
+        background-color: red;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #btn-white{
+        padding: 10px 15px;
+        color: black;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+</style>
+<body>  
+      <h1 id="text">OnClick options are below:</h1>  
+
+      <!-- option: 1 -->
+      <button id="btn-blue" onclick="document.body.style.backgroundColor = 'blue' ">make blue</button>
+
+       <!-- option: 2  -->
+      <button id="btn-purple" onclick="makePurple()">make purple</button>
+
+      <!-- option: 3 -->
+      <button id="btn-green">make green</button>
+
+      <!-- option: 4 -->
+      <button id="btn-red">make red</button>
+
+      <!-- 0ption: 5 -->
+      <button id="btn-white">Refresh</button>
+
+<script>
+    //option: 1
+    const makeBlue = document.getElementById('btn-blue');
+        makeBlue.addEventListener('click', function(){
+        const text = document.getElementById('text');
+        text.style.color = 'white';        
+    })
+
+    // option: 2
+    function makePurple(){
+        document.body.style.backgroundColor = 'purple';
+        const text = document.getElementById('text');
+        text.style.color = 'white';
+        
+    }
+
+    // option: 3
+    const greenButton = document.getElementById('btn-green');
+    greenButton.onclick = makeGreen;
+    function makeGreen(){
+        document.body.style.backgroundColor = 'green';
+        const text = document.getElementById('text');
+        text.style.color = 'white';
+    }
+
+    // option: 4
+    const redButton = document.getElementById('btn-red');
+    redButton.onclick = function makeRed(){
+        document.body.style.backgroundColor = 'red';
+        const text = document.getElementById('text');
+        text.style.color = 'white';
+    }
+
+    // option: 5
+    const makeWhite = document.getElementById('btn-white');
+    makeWhite.addEventListener('click', function(){
+        document.body.style.backgroundColor = 'white'
+        const text = document.getElementById('text');
+        text.style.color = 'black';
+    })
+
+</script>
+</body>
+</html>
