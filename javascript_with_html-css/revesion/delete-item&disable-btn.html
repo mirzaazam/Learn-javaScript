@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete git repo</title>
+</head>
+
+<style>
+    body {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: darkgray;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #input-text {
+        font-size: 25px;
+        border-radius: 5px;
+        padding: 8px;
+        border: none;
+    }
+
+    #btn{
+        padding: 10px 25px;  
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .div-container{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+</style>
+
+<body>
+    <!-- Heading -->
+    <h1>When we write delete text in the input field than delete button will enable</h1>
+    <br>
+
+    <!-- input field and button -->
+    <div class="div-container">
+        <input type="text" id="input-text">
+        <button id="btn" disabled>delete</button>
+    </div>
+
+    <!-- javascript code -->
+    <script>
+        const inputText = document.getElementById('input-text').addEventListener('keyup',function(event){
+            const inputValue = event.target.value;
+            if( inputValue == 'delete'){
+                document.getElementById('btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('btn').setAttribute('disabled', true);
+            }
+        })
+        
+    </script>
+</body>
+
+</html>
